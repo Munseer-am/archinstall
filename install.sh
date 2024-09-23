@@ -98,7 +98,7 @@ hwclock --systohc
 echo "INSTALLING BOOTLOADER"
 mkdir /boot/efi
 mount $EFI /boot/efi
-pacmafn -S grub efibootmgr dosfstools mtools os-prober --noconfirm
+pacman -S grub efibootmgr dosfstools mtools os-prober --noconfirm
 
 grub-install --target=x86_64-efi --bootloader-id=$hostname --efi-directory=/boot --force
 grub-mkconfig -o /boot/grub/grub.cfg
